@@ -11,6 +11,6 @@ make test (Runs mandotory and bonus test)
 make mando (Runs mandotory test)
 make bonus (Runs bonus test)
 
-Check .txt files and check for any diffencess in output window.
+Check .txt files and compare for any diffencess in output window.
 
 (Caution: This tester does not test leaks!)

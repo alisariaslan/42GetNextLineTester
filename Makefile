@@ -6,7 +6,7 @@
 #    By: msariasl <msariasl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/21 21:36:53 by msariasl          #+#    #+#              #
-#    Updated: 2022/12/01 14:50:17 by msariasl         ###   ########.fr        #
+#    Updated: 2022/12/01 16:17:51 by msariasl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,9 +27,6 @@ bonus:
 	@gcc $(BONUS)
 	@./a.out
 	
-n:
-	cd ../
-	norminette
-
-lldb:
-	gcc -g *.c
+clean:
+	@rm -rf a.out
+	@clear

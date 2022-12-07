@@ -3,32 +3,30 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ali <ali@student.42.fr>                    +#+  +:+       +#+         #
+#    By: msariasl <msariasl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/21 21:36:53 by msariasl          #+#    #+#              #
-#    Updated: 2022/12/07 10:09:24 by ali              ###   ########.fr        #
+#    Updated: 2022/12/01 16:17:51 by msariasl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-PF_FILES = $(shell find ../*.c)
-GNL_FILES = $(shell find *.c)
-PREPARE = cd .. && make re
+MANDO = $(shell find ../. -name "*.c" ! -name "*bonus.c"  ! -name "bonus.c")
+BONUS = $(shell find ../. -name "*bonus.c" ! -name "mando.c")
 
 test:
+	make mando
+	make bonus
+
+mando:
 	@clear
-	@echo "\n\n- - -> Please check following files! <- - -\n\n"
-	@$(PREPARE)
-	@nm ../libftprintf.a
-	@echo "\n\n- - -> Please check following lines! (2/n) <- - -\n\n"
-	@gcc $(PF_FILES) $(GNL_FILES)
+	@gcc $(MANDO)
 	@./a.out
-	
+
+bonus:
+	@clear
+	@gcc $(BONUS)
+	@./a.out
 	
 clean:
 	@rm -rf a.out
-	@cd .. &&  make clean && make fclean
 	@clear
-
-
-#gcc -Wall -Wextra -Werror libftprintf.a main.c 
-#./a.out  									cd printfTesterBy_msariasl

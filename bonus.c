@@ -6,7 +6,7 @@
 /*   By: msariasl <msariasl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 13:26:30 by msariasl          #+#    #+#             */
-/*   Updated: 2022/12/01 15:53:37 by msariasl         ###   ########.fr       */
+/*   Updated: 2022/12/19 23:25:21 by msariasl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,11 @@ int main()
   int pp = atoi(str);
   pp += p;
   printf("\n\n%d\n\n", pp);
+  printf("K A R M A _ _ _ T E S T\n");
+  int fdA = open("A.txt", O_RDONLY);
+  int fdB = open("B.txt", O_RDONLY);
+  printf("\n1. -> %s",get_next_line(fdA));
+  printf("2. -> %s",get_next_line(fdB));
+  printf("3. -> %s",get_next_line(fdA));
+  printf("4. -> %s\n",get_next_line(fdB));
 }
